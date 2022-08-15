@@ -1,16 +1,16 @@
-# Take Home Assignments - Harits Abdurrohman
+# Take Home Assignments
 
 ## ETL Process
 
 ETL is a process within data engineer pipeline to transform data into target source. ETL consists of three operation, known as:
 
-- (E)xtraction: extract data from sources. The main idea of extraction is to get the expected data from many sources. In this phase, validation test is held to check whether the source has the expected values in a given business domain.
-- (T)ransform: transform the extracted data into correct format of given target. Data warehouse collecting data from several format like csv, json, xml and relational databases. Transform phase consolidate source format into target format. Beside changing the format, this phase also carries data cleaning. This process involve needs from given business and technical context. For example joining multiple extracted data into single data, aggregating some values, re-ordering the columns or even encode columns.
-- (L)oad: loads the transformed data to target databases. In this phase, mostly new data is concatenated and rarely overwrite the existing data. Data warehouse records all of transaction.
+- (E)xtraction: extract data from sources. The main idea of extraction is to get the expected data from many sources. In this phase, a validation test is held to check whether the source has the expected values in a given business domain.
+- (T)ransform: transform the extracted data into the correct format of a given target. The Data warehouse collects data from several forms like CSV, JSON, XML, and relational databases. The transform phase consolidates the source format into the target format. Besides changing the format, this phase also carries data cleaning. This process involves needs from a given business and technical context. For example, joining multiple extracted data into single data, aggregating some values, re-ordering the columns, or even encoding columns.
+- (L)oad: loads the transformed data to target databases. In this phase, primarily new data is concatenated and rarely overwrites the existing data. The Data warehouse records all transactions.
 
 Documentation of ETL code:
 
-In this assignments, I assume the given data already cleaned, therefore there is no data cleaning process. The only transformation is change the data file type from csv into sql. My db engine of choice is SQLite, due to lightweight and more favorable in small scale projects. Eventually, this function expected three mandatory parameters, consists of:
+In this assignment, I assume the given data is already cleaned, therefore there is no data cleaning process. The only transformation is to change the data file type from CSV into SQL. My DB engine of choice is SQLite, due lightweight and more favorable in small-scale projects. Eventually, this function expected three mandatory parameters, consists of:
 
 - data_path [*string]*: path of csv file
 - table_name [*string*]: name of the given table. Assuming the name of table is different from file name
