@@ -31,7 +31,7 @@ def etl_function():
 def message():
     posted_data = request.get_json()
     name = posted_data['name']
-    return jsonify(" Hope you are having a good time " +  name + "!!!")
+    return jsonify("Visualization placeholder")
 
 
 if __name__=='__main__':
